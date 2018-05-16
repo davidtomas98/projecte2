@@ -1,0 +1,84 @@
+<?php
+
+namespace RegistreBundle\Entity;
+
+/**
+ * Login
+ */
+class Login
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $usuari;
+
+    /**
+     * @var string
+     */
+    private $pass;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set usuari
+     *
+     * @param string $usuari
+     *
+     * @return Login
+     */
+    public function setUsuari($usuari)
+    {
+        $this->usuari = $usuari;
+
+        return $this;
+    }
+
+    /**
+     * Get usuari
+     *
+     * @return string
+     */
+    public function getUsuari()
+    {
+        return $this->usuari;
+    }
+
+    /**
+     * Set pass
+     *
+     * @param string $pass
+     *
+     * @return Login
+     */
+    public function setPass($pass)
+    {
+        $this->pass = $pass;
+
+        return $this;
+    }
+
+    /**
+     * Get pass
+     *
+     * @return string
+     */
+    public function getPass()
+    {
+        return $this->pass;
+    }
+}
+
