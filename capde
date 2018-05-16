@@ -1,0 +1,7 @@
+$em = $this->getDoctrine()->getEntityManager();
+		$type_repo=$em->getRepository("PugsBundle:Type");
+		$types=$type_repo->findAll();
+		
+		return $this->render("PugsBundle:Type:index.html.twig",array(
+			"types" => $types
+		));

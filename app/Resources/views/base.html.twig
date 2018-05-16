@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% block stylesheets %}
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}VOIP{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href="{{ asset('bundles/app/css/style.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset('bundles/app/css/header.css') }}" rel="stylesheet" type="text/css">
+	<link href="{{ asset('bundles/app/css/index.css') }}"  rel="stylesheet" type="text/css">    
+        <link href="{{ asset('bundles/app/css/pagina.css') }}"  rel="stylesheet" type="text/css">
+        <link href="{{ asset('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css') }}"  rel="stylesheet" type="bootstrap-css">  
+    </head>
+{% endblock %}
+{% block javascripts %}
+        <script type="text/javascript" src="{{ asset('//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js')}}"></script>
+        <script type="text/javascript" src="{{ asset('//code.jquery.com/jquery-1.11.1.min.js')}}"></script>
+
+   
+
+{% endblock %}
+        
+        
+ 
+    <body width="100%" bgproperties="fixed" b>
+    {% block body %}
+    {% endblock %}
+    
+    </body>
+    
+</html>

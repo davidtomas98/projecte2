@@ -1,0 +1,62 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+<div class="header">
+  <a class="logo">Registres de trucades</a>
+  <a>
+       
+                            <a href="#">
+                                {% if app.user != null%}
+                                    Bienvenido, {{app.user.name}} {{app.user.surname}}
+                                {% endif%}
+                                </a>
+                            
+      </a>
+  <div class="header-right">
+    <a class="active" href="{{path("logout")}}">Sortir</a>
+  </div>
+</div>
+<body width="100%" bgproperties="fixed" b>
+<br>
+<div class="count">
+        <span class="label label-primary">
+            Entradas en total: {{ pagination.getTotalItemCount }}
+        </span>
+    </div>
+        <p></p>
+	<table>
+		<tr bgcolor="#424242">
+			<td>ID</td>
+                        <td>SRC</td>
+			<td>DST</td>
+			<td>Dcontect</td>
+			<td>Canal</td>
+			<td>DSTcanal</td>
+			<td>Data</td>
+			<td>Duració</td>
+			<td>Disposició</td>
+            		
+		</tr>
+                
+		{% for cdr in pagination %}
+                <tr>
+                    <td>{{ cdr.id }}</td>
+                    <td>{{ cdr.src }}</td>
+		    <td>{{ cdr.dst }}</td>
+		    <td>{{ cdr.dcontext }}</td>
+		    <td>{{ cdr.channel }}</td>
+		    <td>{{ cdr.dstchannel }}</td>
+                    <td>{{ cdr.calldate}}</td>
+                    <td>{{ cdr.duration}}</td>
+	    	    <td>{{ cdr.disposition }}</td>
+                {% endfor %}
+            </table>
+	    {# display navigation #}
+	    <div class="navigation">
+		{{ knp_pagination_render(pagination) }}
+	    </div>
+</body>
+{% endblock %}
+
+
+

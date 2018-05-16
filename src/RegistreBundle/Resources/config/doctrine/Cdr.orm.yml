@@ -1,0 +1,126 @@
+RegistreBundle\Entity\Cdr:
+    type: entity
+    table: cdr
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        uniqueid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        userfield:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+        accountcode:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+                default: ''
+        src:
+            type: string
+            nullable: false
+            length: 80
+            options:
+                fixed: false
+                default: ''
+        dst:
+            type: string
+            nullable: false
+            length: 80
+            options:
+                fixed: false
+                default: ''
+        dcontext:
+            type: string
+            nullable: false
+            length: 80
+            options:
+                fixed: false
+                default: ''
+        clid:
+            type: string
+            nullable: false
+            length: 80
+            options:
+                fixed: false
+                default: ''
+        channel:
+            type: string
+            nullable: false
+            length: 80
+            options:
+                fixed: false
+                default: ''
+        dstchannel:
+            type: string
+            nullable: false
+            length: 80
+            options:
+                fixed: false
+                default: ''
+        lastapp:
+            type: string
+            nullable: false
+            length: 80
+            options:
+                fixed: false
+                default: ''
+        lastdata:
+            type: string
+            nullable: false
+            length: 80
+            options:
+                fixed: false
+                default: ''
+        calldate:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+                default: ''
+        duration:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        billsec:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+        disposition:
+            type: string
+            nullable: false
+            length: 45
+            options:
+                fixed: false
+                default: ''
+        amaflags:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+        value:
+            type: float
+            nullable: true
+            precision: 7
+            scale: 3
+    lifecycleCallbacks: {  }
