@@ -16,6 +16,10 @@ class User implements UserInterface
     /**
      * @var string
      */
+    private $usuari;
+    /**
+     * @var string
+     */
     private $role;
 
     /**
@@ -40,7 +44,7 @@ class User implements UserInterface
 
 
     public function getUsername() {
-        return $this->email;
+        return $this->usuari;
     }
     
     public function getSalt() {
@@ -96,6 +100,25 @@ class User implements UserInterface
      *
      * @return Users
      */
+    
+    public function setUsuari($usuari)
+    {
+        $this->usuari = $usuari;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getUsuari()
+    {
+        return $this->usuari;
+    }
+    
+    
     public function setName($name)
     {
         $this->name = $name;

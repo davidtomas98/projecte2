@@ -1,10 +1,10 @@
 registre_homepage:
-    path:     /
-    defaults: { _controller: RegistreBundle:Defaut:index}
-
+    path: /
+    defaults: { _controller: RegistreBundle:User:login}
+    
 login:
     path: /login
-    defaults: { _controller: RegistreBundle:User:login }
+    defaults: { _controller: RegistreBundle:User:login}
     
 login_check:
     path: /login_check
@@ -15,3 +15,4 @@ logout:
 entrades_list:
     path: /taula
     defaults: { _controller: RegistreBundle:Cdr:entrades}
+

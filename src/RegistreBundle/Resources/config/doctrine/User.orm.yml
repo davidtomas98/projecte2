@@ -11,6 +11,12 @@ RegistreBundle\Entity\User:
             generator:
                 strategy: IDENTITY
     fields:
+        usuari:
+            type: string
+            nullable: davidtomas
+            length: 255
+            options:
+                fixed: false
         role:
             type: string
             nullable: true

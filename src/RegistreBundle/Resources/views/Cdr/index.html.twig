@@ -1,17 +1,16 @@
 {% extends "::base.html.twig" %}
 
 {% block body %}
+    
+
 <div class="header">
-  <a class="logo">Registres de trucades</a>
-  <a>
-       
-                            <a href="#">
-                                {% if app.user != null%}
-                                    Bienvenido, {{app.user.name}} {{app.user.surname}}
-                                {% endif%}
-                                </a>
-                            
+  <a class="logo">Registres de trucades
+  
       </a>
+    
+  <div class="header-left">
+  
+   </div>
   <div class="header-right">
     <a class="active" href="{{path("logout")}}">Sortir</a>
   </div>
@@ -20,7 +19,7 @@
 <br>
 <div class="count">
         <span class="label label-primary">
-            Entradas en total: {{ pagination.getTotalItemCount }}
+         El total d'entrades són: {{ pagination.getTotalItemCount }}
         </span>
     </div>
         <p></p>

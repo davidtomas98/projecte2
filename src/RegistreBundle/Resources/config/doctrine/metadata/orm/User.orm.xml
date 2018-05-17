@@ -4,6 +4,11 @@
     <id name="id" type="integer" column="id">
       <generator strategy="IDENTITY"/>
     </id>
+    <field name="usuari" type="string" column="usuari" length="255">
+      <options>
+        <option name="fixed"/>
+      </options>
+    </field>
     <field name="role" type="string" column="role" length="20" nullable="true">
       <options>
         <option name="fixed"/>

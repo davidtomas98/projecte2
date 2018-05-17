@@ -16,8 +16,11 @@ class UserType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+             ->add('usuari',TextType::class, array("label"=>"Usuari VoIP","required"=>"required", "attr" =>array(
+				"class" => "form-name  form-control",
+			)))
              ->add('name',TextType::class, array("label"=>"Nom","required"=>"required", "attr" =>array(
-				"class" => "form-name form-control",
+				"class" => "form-name  form-control",
 			)))
             ->add('surname',TextType::class, array("label"=>"Cognom","required"=>"required", "attr" =>array(
 				"class" => "form-surname form-control",
@@ -29,7 +32,7 @@ class UserType extends AbstractType
             ->add('password',PasswordType::class, array("label"=>"Password","required"=>"required", "attr" =>array(
 				"class" => "form-password form-control",
 			)))
-			->add('Guardar', SubmitType::class, array("attr" =>array(
+	    ->add('Guardar', SubmitType::class, array("attr" =>array(
 				"class" => "form-submit btn btn-success",
 			)))
         ;

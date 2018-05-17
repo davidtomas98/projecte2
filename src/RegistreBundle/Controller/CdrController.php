@@ -24,7 +24,7 @@ class CdrController extends Controller
 		('pagination' => $pagination
 	));
     }
-
+    
 
 }
                 

@@ -1,51 +1,27 @@
 {% extends "::base.html.twig" %}
-{% block content %}
-
 {% block body %}
     <div class="header">
-  <a class="logo">Registres de trucades</a>
-  <a>
-       
-                            <a href="#">
-                                {% if app.user != null%}
-                                    Bienvenido, {{app.user.name}} {{app.user.surname}}
-                                {% endif%}
-                                </a>
-                            
-      </a>
+        <a class="logo">Registres de trucades</a>
     </div>
-<div class="container">
+        <div class="container">
  <div class="row">
  <div class="login">
  <div class="login-triangle"></div>
     <h2 class="login-header">Login</h2>
-    <form class="login-container" action="{{path("login_check")}}" method="post">
-         <p><input type="email" id="username" name="_username" value="{{ lastUsername }}" class="form-control" placeholder="Email" required autofocus/></p>
-         <p><input type="password" id="password" name="_password" class="form-control" placeholder="Password" required/></p>
-         <p><input type="submit" value="Entrar" class="btn btn-lg btn-primary btn-block"/>
-         <input type="hidden" name="_target_path" value="/login" />
-    </form>
-  </div>
-  </div>
-</div>
-<div class="container">
-	<div class="row">
-            <div class="login">
-                <div class="login-triangle"></div>
-                    <h2 class="login-header">Registre</h2>
-  
-<form class="login-container">
-        {% for message in app.session.flashbag().get('status') %}
-            <div class="alert alert-success">{{ message }}</div>
+        <form class="login-container" action="{{path("login_check")}}" method="post">
+            <label>Usuari:</label>
+            <input type="text" id="username" name="_username" value="{{ lastUsername }}" class="form-control" />
+            <br/>
+            <label>Paraula de pas:</label>
+            <input type="password" id="password" name="_password" class="form-control" />
+            <br/>
+            <input type="submit" value="Entrar" class="btn btn-success"/>
+           
+            <input type="hidden" name="target_path" class="btn btn-success" value="/taula"/>
             
-        {% endfor %}
-        {{form_start(form, {'action':'', 'method':'POST'})}}
-        {{form_end(form)}}
-</form>
+            </form>
+    </div>
   </div>
- </div>
-</div>
 <div class="clearfix"></div>
 
-{% endblock %}
 {% endblock %}
